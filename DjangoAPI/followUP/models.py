@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class OF(models.Model):
     RefPr = models.IntegerField(primary_key=True)
-    NomPr = models.CharField(max_length=100)
-    StatutPr = models.CharField(max_length=100)
-    NumOF = models.IntegerField()
-    Priorité = models.IntegerField()
+    NomPr = models.CharField(default='', max_length=100)
+    StatutPr = models.CharField(default='', max_length=100)
+    NumOF = models.CharField(default='', max_length=100)
+    Priorité = models.CharField(default='', max_length=100)
     # PA_FAO = models.IntegerField(max_length=100)
     # PA_CNC = models.IntegerField(max_length=100)
     # PA_Router = models.IntegerField(max_length=100)

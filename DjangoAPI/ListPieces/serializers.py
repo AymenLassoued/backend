@@ -5,6 +5,5 @@ from ListPieces.models import LIST_PIECES
 class LISTSerializer(serializers.ModelSerializer):
     class Meta:
         model = LIST_PIECES
-        fields = ('RefOF','NumOF', 'Qte', 'Designation', 'Matiere', 'Dimension', 'Qualification',
-        'Temps_Pre', 'Temps_Rea', 'TotalCNC_Pre', 'TotalCNC_Rea', 'TotalCONV_Pre', 'TotalCONV_Rea'
-        , 'Conformite_C', 'Conformite_NC')
+        fields = ('NumOF', 'Qte', 'Désignation', 'Matiére', 'Dimension', 'Qual',
+        'Prévu_h', 'Réalisé_h', 'Conformité_C', 'Conformité_NC')

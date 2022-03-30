@@ -5,4 +5,5 @@ from followUP.models import OF
 class OFSerializer(serializers.ModelSerializer):
     class Meta:
         model = OF
-        fields = ('RefPr','NomPr', 'StatutPr', 'NumOF', 'Priorité' )
+        fields = ('RefPr','NomPr', 'Statu tPr', 'NumOF', 'Priorité' )
+        

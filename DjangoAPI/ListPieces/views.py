@@ -25,7 +25,7 @@ def ListPiecesApi(request,id=0):
     
     elif request.method=='PUT':
         list_data = JSONParser().parse(request)
-        listpieces=LIST_PIECES.objects.get(RefPr=list_data['RefPr'])
+        listpieces=LIST_PIECES.objects.get(RefOF=list_data['RefOF'])
         list_serializer=LISTSerializer(listpieces,data=list_data)
         if list_serializer.is_valid():
             list_serializer.save()
@@ -33,6 +33,13 @@ def ListPiecesApi(request,id=0):
         return JsonResponse("Failed to Update.", safe=False)
 
     elif request.method=='DELETE':
-        listpieces=LIST_PIECES.objects.get(RefPr=id)
+        listpieces=LIST_PIECES.objects.get(RefOF=id)
         listpieces.delete()
         return JsonResponse("Deleted Succeffully!!", safe=False)
+
+def list_detail(request, pk):
+    tutorial = LIST_PIECES.objects.get(pk=pk)
+ 
+    if request.method == 'GET': 
+        tutorial_serializer = LISTSerializer(tutorial) 
+        return JsonResponse(tutorial_serializer.data) 

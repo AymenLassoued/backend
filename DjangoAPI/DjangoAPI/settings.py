@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'followUP.apps.FollowupConfig',
     'rest_framework',
     'users',
-    'ListPieces'
-    
+    'ListPieces',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +82,7 @@ WSGI_APPLICATION = 'DjangoAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_react_gpi',
+        'NAME': 'djangoBD',
         'USER' : 'postgres',
         'PASSWORD' : 'aymenlsd99',
         'HOST' : 'localhost',
